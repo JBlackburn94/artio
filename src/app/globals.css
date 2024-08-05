@@ -6,3 +6,14 @@
   font-family: "OPTILency";
   src: url("../font/OPTILency.otf") format("ttf");
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #F0EEEA;
+  background-color: #2F332B;
+}
