@@ -2,6 +2,7 @@ import { navLinks } from "@/constants";
 import Image from "next/image";
 import navLogo from "../../public/nav-logo.svg";
 import Link from "next/link";
+import { SiApplemusic } from "react-icons/si";
 import {
   FaInstagram,
   FaTiktok,
@@ -35,6 +36,9 @@ export default function Navbar() {
           </Link>
           <Link href={"#"}>
             <FaSpotify className="text-[30px]" />
+          </Link>
+          <Link href={"#"}>
+            <SiApplemusic className="text-[30px]" />
           </Link>
         </div>
       </nav>
