@@ -51,7 +51,12 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex items-center justify-start lg:justify-center w-1/2 lg:w-1/3 z-20">
-          <Image src={navLogo} alt="Artio Logo" className="w-[70px] h-auto" />
+          <Image
+            src={navLogo}
+            alt="Artio Logo"
+            className="w-[70px] h-auto"
+            priority
+          />
         </div>
         <div className="hidden lg:flex items-center justify-end gap-[20px] w-1/3">
           <Link href={"#"}>

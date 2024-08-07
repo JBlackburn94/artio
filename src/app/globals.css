@@ -18,3 +18,10 @@ body {
   color: #F0EEEA;
   background-color: #2F332B;
 }
+
+#hero {
+  background-image: url("../../public/artio-hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

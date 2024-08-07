@@ -1,3 +1,4 @@
+import Hero from "@/components/Hero";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
@@ -9,6 +10,7 @@ export default function Home() {
           BABYFACE out now via Slam Dunk Records
         </Link>
       </Marquee>
+      <Hero />
     </main>
   );
 }
