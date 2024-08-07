@@ -9,7 +9,7 @@ export default function Hero() {
       id="hero"
     >
       <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center">
-        <h1 className="font-optil uppercase text-[80px] lg:text-[100px]">
+        <h1 className="font-optil uppercase text-[40px] lg:text-[100px]">
           Babyface
         </h1>
         <Image
