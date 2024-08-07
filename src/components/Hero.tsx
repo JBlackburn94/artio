@@ -13,7 +13,7 @@ export default function Hero() {
     >
       <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center">
         <h1
-          className={`${optil.className} uppercase text-[80px] lg:text-[80px]`}
+          className={`${optil.className} uppercase text-[60px] lg:text-[80px]`}
         >
           Debut Album
         </h1>

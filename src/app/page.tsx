@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
@@ -11,6 +12,7 @@ export default function Home() {
         </Link>
       </Marquee>
       <Hero />
+      <About />
     </main>
   );
 }
