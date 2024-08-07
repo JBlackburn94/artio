@@ -14,6 +14,17 @@ export default function About() {
         >
           Artio
         </h2>
+        <span className="flex flex-col justify-center items-center border-2 border-artioRed p-2">
+          <h3 className="uppercase font-black text-artioRed">
+            Alt rock from up north
+          </h3>
+          <span className="flex items-center gap-x-[20px] gap-y-[10px] justify-center flex-wrap">
+            <p>Rae (they/them)</p>
+            <p>Jai (they/them)</p>
+            <p>Rob (he/him)</p>
+            <p>Ieuan (he/him)</p>
+          </span>
+        </span>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga natus
           ea temporibus omnis minima reprehenderit impedit mollitia quidem
