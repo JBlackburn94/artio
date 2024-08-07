@@ -1,6 +1,9 @@
 import Image from "next/image";
 import albumArt from "../../public/artwork.webp";
 import Link from "next/link";
+import localFont from "next/font/local";
+
+const optil = localFont({ src: "../font/OPTILency.otf" });
 
 export default function Hero() {
   return (
@@ -9,7 +12,9 @@ export default function Hero() {
       id="hero"
     >
       <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center">
-        <h1 className="font-optil uppercase text-[40px] lg:text-[100px]">
+        <h1
+          className={`${optil.className} uppercase text-[80px] lg:text-[100px]`}
+        >
           Babyface
         </h1>
         <Image
