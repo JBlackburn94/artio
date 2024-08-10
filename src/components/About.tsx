@@ -7,8 +7,11 @@ const optil = localFont({ src: "../font/OPTILency.otf" });
 
 export default function About() {
   return (
-    <section className="h-screen w-full flex flex-col lg:flex-row justify-center lg:justify-between items-center px-[22px] lg:px-[135px] gap-[38px]">
-      <div className="flex flex-col justify-center items-center w-full lg:w-1/2 gap-[20px]">
+    <section className="w-full flex flex-col lg:flex-row justify-center lg:justify-between items-center px-[22px] lg:px-[135px] gap-[38px] mb-10">
+      <div
+        className="flex flex-col justify-center items-center w-full h-auto lg:w-1/2 gap-[20px]"
+        id="about"
+      >
         <h2
           className={`${optil.className} uppercase text-[170px] text-artioRed`}
         >
@@ -38,19 +41,19 @@ export default function About() {
         <span className="flex gap-[20px] flex-wrap">
           <Link
             href={"/"}
-            className="bg-artioWhite text-artioRed px-[19px] py-[8px] font-black uppercase"
+            className="bg-artioWhite text-artioRed px-[19px] py-[8px] text-[12px] font-black uppercase"
           >
             TikTok
           </Link>
           <Link
             href={"/"}
-            className="bg-artioWhite text-artioRed px-[19px] py-[8px] font-black uppercase"
+            className="bg-artioWhite text-artioRed px-[19px] py-[8px] text-[12px] font-black uppercase"
           >
             Instagram
           </Link>
           <Link
             href={"/"}
-            className="bg-artioWhite text-artioRed px-[19px] py-[8px] font-black uppercase"
+            className="bg-artioWhite text-artioRed px-[19px] py-[8px] text-[12px] font-black uppercase"
           >
             YouTube
           </Link>
