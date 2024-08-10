@@ -25,3 +25,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+#tickets {
+  background-image: url("../../public/artio-shows.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
