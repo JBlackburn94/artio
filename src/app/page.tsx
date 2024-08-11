@@ -4,6 +4,7 @@ import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import Tickets from "@/components/Tickets";
 import Merch from "@/components/Merch";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <Tickets />
       <Merch />
+      <Footer />
     </main>
   );
 }
