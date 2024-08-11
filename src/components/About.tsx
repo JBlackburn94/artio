@@ -59,8 +59,25 @@ export default function About() {
           </Link>
         </span>
       </div>
-      <div className="lg:flex flex-col justify-center items-center w-full lg:w-1/2 hidden">
-        <Image src={aboutImg} alt="Promo Shot of Artio" />
+      <div className="flex flex-col justify-center items-center w-full lg:w-1/2 gap-[20px]">
+        <Image
+          className="hidden lg:block"
+          src={aboutImg}
+          alt="Promo Shot of Artio"
+        />
+        <span className="flex flex-col justify-start items-start w-full gap-[10px]">
+          <h3 className="uppercase font-black text-artioRed">Contacts</h3>
+          <p>
+            <span className="font-semibold">Booking:</span>
+            <br />
+            Lola.castillomurphy@caa.com
+          </p>
+          <p>
+            <span className="font-semibold">Press & General Enquiries</span>
+            <br />
+            ealdwinkleevents@gmail.com
+          </p>
+        </span>
       </div>
     </section>
   );
