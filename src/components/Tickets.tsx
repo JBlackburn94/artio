@@ -1,8 +1,9 @@
+import { Archivo } from "next/font/google";
 import localFont from "next/font/local";
-import TicketContainer from "./TicketContainer";
 import Script from "next/script";
 
 const optil = localFont({ src: "../font/OPTILency.otf" });
+const archivo = Archivo({ subsets: ["latin"] });
 
 export default function Tickets() {
   return (
@@ -16,24 +17,24 @@ export default function Tickets() {
           href="https://www.songkick.com/artists/10060465"
           className="songkick-widget"
           data-theme="dark"
-          data-track-button="on"
+          data-track-button="off"
           data-detect-style="off"
-          data-background-color="rgb(0,0,0,1)"
-          data-font-color="rgb(255,255,255,1)"
-          data-button-bg-color="rgb(255,255,255,1)"
-          data-button-text-color="rgb(0,0,0,1)"
+          data-background-color="none"
+          data-font-color="rgb(240,238,234)"
+          data-button-bg-color="rgb(240,238,234)"
+          data-button-text-color="rgb(197,52,52)"
           data-locale="en"
           data-other-artists="on"
           data-share-button="on"
           data-country-filter="on"
           data-rsvp="on"
-          data-request-show="on"
+          data-request-show="off"
           data-past-events="off"
           data-past-events-offtour="off"
-          data-remind-me="off"
+          data-remind-me="on"
           style={{ display: "none" }}
         ></a>
-        <Script src="//widget-app.songkick.com/injector/1084890"></Script>
+        <Script src="//widget-app.songkick.com/injector/10060465"></Script>
       </div>
     </section>
   );
