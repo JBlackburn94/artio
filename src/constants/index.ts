@@ -19,9 +19,4 @@ export const navLinks = [
         name: 'Merch',
         href: "#merch",
     },
-    {
-        id: 5,
-        name: 'Contact',
-        href: "#contact",
-    },
 ]

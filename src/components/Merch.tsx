@@ -20,7 +20,7 @@ export default function Merch() {
         <h3 className="font-bold text-[28px] text-center capitalize">
           Get the latest official Artio merch.
         </h3>
-        <Button href="/" content="Shop Now" />
+        <Button href="https://artio.bigcartel.com/" content="Shop Now" />
         <span className="flex flex-col justify-center items-center border-2 border-artioRed p-2">
           <p>
             Limited batches, biodegradable packaging and printed on eco friendly

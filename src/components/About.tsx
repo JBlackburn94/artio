@@ -2,7 +2,8 @@ import localFont from "next/font/local";
 import Link from "next/link";
 import Image from "next/image";
 import aboutImg from "../../public/artio-about.webp";
-import Button from "./Button";
+import { FaInstagram, FaSpotify, FaTiktok, FaYoutube } from "react-icons/fa";
+import { SiApplemusic } from "react-icons/si";
 
 const optil = localFont({ src: "../font/OPTILency.otf" });
 
@@ -40,9 +41,36 @@ export default function About() {
         </p>
         <h3 className="font-black text-[20px] text-artioRed">Find Us!</h3>
         <span className="flex gap-[20px] flex-wrap">
-          <Button href="/" content="TikTok" />
-          <Button href="/" content="Instagram" />
-          <Button href="/" content="YouTube" />
+          <Link
+            href={"https://www.instagram.com/artiomusic/?hl=en"}
+            target="_blank"
+          >
+            <FaInstagram className="text-[40px] hover:text-artioRed" />
+          </Link>
+          <Link
+            href={"https://www.tiktok.com/@artiomusic?lang=en"}
+            target="_blank"
+          >
+            <FaTiktok className="text-[40px] hover:text-artioRed" />
+          </Link>
+          <Link
+            href={"https://www.youtube.com/channel/UCN6Em1EiZtA_YR37VXprdYg"}
+            target="_blank"
+          >
+            <FaYoutube className="text-[40px] hover:text-artioRed" />
+          </Link>
+          <Link
+            href={"https://open.spotify.com/artist/0l2QxnR8KJQT4m2Ax8rhh5"}
+            target="_blank"
+          >
+            <FaSpotify className="text-[40px] hover:text-artioRed" />
+          </Link>
+          <Link
+            href={"https://music.apple.com/gb/artist/artio/585230648"}
+            target="_blank"
+          >
+            <SiApplemusic className="text-[40px] hover:text-artioRed" />
+          </Link>
         </span>
       </div>
       <div className="flex flex-col justify-center items-center w-full lg:w-1/2 gap-[20px]">
