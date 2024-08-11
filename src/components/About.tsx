@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import Link from "next/link";
 import Image from "next/image";
 import aboutImg from "../../public/artio-about.webp";
+import Button from "./Button";
 
 const optil = localFont({ src: "../font/OPTILency.otf" });
 
@@ -39,24 +40,9 @@ export default function About() {
         </p>
         <h3 className="font-black text-[20px] text-artioRed">Find Us!</h3>
         <span className="flex gap-[20px] flex-wrap">
-          <Link
-            href={"/"}
-            className="bg-artioWhite text-artioRed px-[19px] py-[8px] text-[12px] font-black uppercase"
-          >
-            TikTok
-          </Link>
-          <Link
-            href={"/"}
-            className="bg-artioWhite text-artioRed px-[19px] py-[8px] text-[12px] font-black uppercase"
-          >
-            Instagram
-          </Link>
-          <Link
-            href={"/"}
-            className="bg-artioWhite text-artioRed px-[19px] py-[8px] text-[12px] font-black uppercase"
-          >
-            YouTube
-          </Link>
+          <Button href="/" content="TikTok" />
+          <Button href="/" content="Instagram" />
+          <Button href="/" content="YouTube" />
         </span>
       </div>
       <div className="flex flex-col justify-center items-center w-full lg:w-1/2 gap-[20px]">
@@ -70,7 +56,7 @@ export default function About() {
           <p>
             <span className="font-semibold">Booking:</span>
             <br />
-            Lola.castillomurphy@caa.com
+            lola.castillomurphy@caa.com
           </p>
           <p>
             <span className="font-semibold">Press & General Enquiries</span>
