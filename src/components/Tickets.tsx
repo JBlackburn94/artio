@@ -12,7 +12,7 @@ export default function Tickets() {
       id="tickets"
     >
       <h2 className={`${optil.className} text-[100px]`}>Upcoming Shows</h2>
-      <div className="w-full flex flex-col gap-[20px]">
+      <div className="ticket-container">
         <a
           href="https://www.songkick.com/artists/10060465"
           className="songkick-widget"

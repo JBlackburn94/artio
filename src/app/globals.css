@@ -31,5 +31,20 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+}
+
+.ticket-container {
+  height: 1020px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.ticket-container::-webkit-scrollbar {
+  width: 10px;
+  background: #2F332B;
+  opacity: 0.5;
+}
+
+.ticket-container::-webkit-scrollbar-thumb {
+  background: #C53434;
 }
