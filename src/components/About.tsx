@@ -30,15 +30,6 @@ export default function About() {
             <p>Ieuan (he/him)</p>
           </span>
         </span>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga natus
-          ea temporibus omnis minima reprehenderit impedit mollitia quidem
-          voluptate magnam corporis, quis voluptates at laborum magni, veritatis
-          ad cupiditate laboriosam. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Fuga natus ea temporibus omnis minima reprehenderit
-          impedit mollitia quidem voluptate magnam corporis, quis voluptates at
-          laborum magni, veritatis ad cupiditate laboriosam.
-        </p>
         <h3 className="font-black text-[20px] text-artioRed">Find Us!</h3>
         <span className="flex gap-[20px] flex-wrap">
           <Link
@@ -73,7 +64,7 @@ export default function About() {
           </Link>
         </span>
       </div>
-      <div className="flex flex-col justify-center items-center w-full lg:w-1/2 gap-[20px]">
+      <div className="flex flex-col justify-center items-center w-full lg:w-1/2 gap-[20px] mt-10">
         <Image
           className="hidden lg:block"
           src={aboutImg}
