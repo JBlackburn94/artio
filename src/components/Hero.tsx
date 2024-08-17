@@ -24,7 +24,8 @@ export default function Hero() {
         />
         <Link
           className="mt-[20px] bg-artioRed font-black py-[8px] px-[20px] text-[20px] lg:text-[28px] uppercase"
-          href={"/"}
+          href={"https://artio.bigcartel.com/product/babyface-album-cd"}
+          target="_blank"
         >
           Get Here
         </Link>
