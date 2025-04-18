@@ -10,7 +10,7 @@ import {
   FaSpotify,
 } from "react-icons/fa";
 import { Sling as Hamburger } from "hamburger-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 

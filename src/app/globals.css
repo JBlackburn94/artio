@@ -22,7 +22,7 @@ body {
 }
 
 #tickets {
-  background-image: url("../../public/artio-shows.webp");
+  background-image: url("../../public/new-ticket.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

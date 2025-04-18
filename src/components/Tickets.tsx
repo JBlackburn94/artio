@@ -11,7 +11,9 @@ export default function Tickets() {
       className="w-full flex flex-col justify-center items-center px-[28px] lg:px-[250px] py-10"
       id="tickets"
     >
-      <h2 className={`${optil.className} text-[100px]`}>Upcoming Shows</h2>
+      <h2 className="text-artioRed text-[70px] text-center font-black uppercase">
+        Upcoming Shows
+      </h2>
       <div className="ticket-container">
         <a
           href="https://www.songkick.com/artists/10060465"
