@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        "optil": ["OPTILency"],
+        optil: ["OPTILency"],
       },
       colors: {
         artioBlack: "#2F332B",
         artioWhite: "#F0EEEA",
-        artioRed: "#C53434",
+        artioRed: "#FE0707",
       },
     },
   },

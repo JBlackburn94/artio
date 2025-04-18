@@ -5,7 +5,7 @@ export default function Button({ href, content }: ButtonProps) {
   return (
     <Link
       href={href}
-      className="bg-artioWhite text-artioRed px-[19px] py-[8px] text-[20px] font-black uppercase hover:bg-artioRed hover:text-artioWhite transition duration-150 ease-in-out"
+      className="bg-artioRed px-5 py-4 mt-10 text-[20px] font-black uppercase hover:scale-110 transition duration-150 ease-in-out"
       target="_blank"
     >
       {content}

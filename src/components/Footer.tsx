@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="h-[30px] bg-artioRed w-full flex items-center justify-center font-semibold text-[12px]">
-      <p className="capitalize">
+      <p>
         Website by{" "}
         <Link
-          href={"https://www.instagram.com/jblackburn.creates"}
+          href={"https://jasonblackburn.co.uk/"}
           className="underline"
           target="_blank"
         >
-          @jblackburn.creates
+          jasonblackburn.co.uk
         </Link>
       </p>
     </footer>

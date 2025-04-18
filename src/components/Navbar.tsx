@@ -1,7 +1,6 @@
 "use client";
 import { navLinks } from "@/constants";
 import Image from "next/image";
-import navLogo from "../../public/nav-logo.svg";
 import Link from "next/link";
 import { SiApplemusic } from "react-icons/si";
 import {
@@ -11,143 +10,136 @@ import {
   FaSpotify,
 } from "react-icons/fa";
 import { Sling as Hamburger } from "hamburger-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
 export default function Navbar() {
-  const [nav, setNav] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleNav = () => {
-    setNav(!nav);
-    gsap.to("#mobile-nav", {
-      x: nav ? "-100%" : 0,
-      opacity: nav ? 0 : 1,
-      duration: 0.2,
-    });
-
-    const navLink = document.querySelectorAll("#nav-link");
-    navLink.forEach((link) => {
-      link.addEventListener("click", () => {
-        setNav(false);
-        gsap.to("#mobile-nav", {
-          x: "-100%",
-          opacity: 0,
-          duration: 0.2,
-        });
-      });
-    });
+    setOpen(false);
   };
+
   return (
     <header>
-      <nav className="flex justify-between px-[40px] py-[13px] items-center">
-        <div className="hidden lg:flex items-center justify-start gap-[20px] w-1/3">
-          {navLinks.map(({ id, name, href }) => (
-            <Link key={id} href={href} className="hover:text-artioRed">
-              {name}
-            </Link>
-          ))}
-        </div>
-        <div className="flex items-center justify-start lg:justify-center w-1/2 lg:w-1/3 z-20 overflow-y-hidden">
-          <Link
-            href={"/"}
-            className="hover:scale-105 transition duration-150 ease-in-out"
-          >
+      <nav className="px-[40px] ${isOpen ? h-auto : h-screen} py-[30px] bg-transparent">
+        <div className="flex justify-between items-center">
+          <div className="z-50">
             <Image
-              src={navLogo}
+              src={"/nav-logo-new.webp"}
               alt="Artio Logo"
-              className="w-[70px] h-auto"
-              priority
+              height={30}
+              width={148}
             />
-          </Link>
-        </div>
-        <div className="hidden lg:flex items-center justify-end gap-[20px] w-1/3">
-          <Link
-            className="hover:text-artioRed"
-            href={"https://www.instagram.com/artiomusic/?hl=en"}
-            target="_blank"
-          >
-            <FaInstagram className="text-[30px]" />
-          </Link>
-          <Link
-            className="hover:text-artioRed"
-            href={"https://www.tiktok.com/@artiomusic?lang=en"}
-            target="_blank"
-          >
-            <FaTiktok className="text-[30px]" />
-          </Link>
-          <Link
-            className="hover:text-artioRed"
-            href={"https://www.youtube.com/channel/UCN6Em1EiZtA_YR37VXprdYg"}
-            target="_blank"
-          >
-            <FaYoutubeSquare className="text-[30px]" />
-          </Link>
-          <Link
-            className="hover:text-artioRed"
-            href={"https://open.spotify.com/artist/0l2QxnR8KJQT4m2Ax8rhh5"}
-            target="_blank"
-          >
-            <FaSpotify className="text-[30px]" />
-          </Link>
-          <Link
-            className="hover:text-artioRed"
-            href={"https://music.apple.com/gb/artist/artio/585230648"}
-            target="_blank"
-          >
-            <SiApplemusic className="text-[30px]" />
-          </Link>
-        </div>
-        <div
-          className="flex w-1/2 justify-end items-center lg:hidden z-30"
-          onClick={handleNav}
-        >
-          <Hamburger toggled={nav} toggle={setNav} />
-        </div>
-        <div
-          className="absolute flex flex-col items-center justify-center gap-[40px] text-[28px] uppercase font-black h-screen w-full bg-artioRed top-0 left-0 z-10 translate-x-[-100%] opacity-0"
-          id="mobile-nav"
-        >
-          {navLinks.map(({ id, name, href }) => (
-            <Link key={id} href={href} id="nav-link">
-              {name}
-            </Link>
-          ))}
-          <div className="flex gap-[35px]">
-            <Link
-              href={"https://www.instagram.com/artiomusic/?hl=en"}
-              target="_blank"
-            >
-              <FaInstagram className="text-[40px]" />
-            </Link>
-            <Link
-              href={"https://www.tiktok.com/@artiomusic?lang=en"}
-              target="_blank"
-            >
-              <FaTiktok className="text-[40px]" />
-            </Link>
-            <Link
-              href={"https://www.youtube.com/channel/UCN6Em1EiZtA_YR37VXprdYg"}
-              target="_blank"
-            >
-              <FaYoutubeSquare className="text-[40px]" />
-            </Link>
-            <Link
-              href={"https://open.spotify.com/artist/0l2QxnR8KJQT4m2Ax8rhh5"}
-              target="_blank"
-            >
-              <FaSpotify className="text-[40px]" />
-            </Link>
-            <Link
-              href={"https://music.apple.com/gb/artist/artio/585230648"}
-              target="_blank"
-            >
-              <SiApplemusic className="text-[40px]" />
-            </Link>
+          </div>
+          <div className="hidden lg:flex flex-col items-end z-40">
+            <div>
+              {navLinks.map(({ id, href, name }) => (
+                <Link
+                  href={href}
+                  key={id}
+                  className="mx-2 text-artioRed text-[16px] font-bold uppercase hover:underline transition-all duration-200 ease-in-out"
+                >
+                  {name}
+                </Link>
+              ))}
+            </div>
+            <div className="flex mt-4">
+              <Link
+                href={"https://music.apple.com/gb/artist/artio/585230648"}
+                target="_blank"
+              >
+                <SiApplemusic size={20} className="social-link" />
+              </Link>
+              <Link
+                href={"https://www.tiktok.com/@artiomusic?lang=en"}
+                target="_blank"
+              >
+                <FaTiktok size={20} className="social-link" />
+              </Link>
+              <Link
+                href={
+                  "https://www.youtube.com/channel/UCN6Em1EiZtA_YR37VXprdYg"
+                }
+                target="_blank"
+              >
+                <FaYoutubeSquare size={20} className="social-link" />
+              </Link>
+              <Link
+                href={"https://open.spotify.com/artist/0l2QxnR8KJQT4m2Ax8rhh5"}
+                target="_blank"
+              >
+                <FaSpotify size={20} className="social-link" />
+              </Link>
+              <Link
+                href={"https://www.instagram.com/artiomusic/?hl=en"}
+                target="_blank"
+              >
+                <FaInstagram size={20} className="social-link" />
+              </Link>
+            </div>
+          </div>
+          <div className="block lg:hidden z-50">
+            <Hamburger toggled={open} toggle={setOpen} />
           </div>
         </div>
+        {open && (
+          <div className="h-screen w-full absolute top-0 left-0 bg-black bg-opacity-80 z-40 backdrop-blur-md flex flex-col pt-[100px] px-10">
+            {navLinks.map(({ id, href, name }) => (
+              <Link
+                key={id}
+                href={href}
+                className="text-[40px] mb-[20px] font-black uppercase text-artioRed"
+                onClick={handleNav}
+              >
+                {name}
+              </Link>
+            ))}
+            <hr />
+            <div className="flex mt-[50px]">
+              <Link
+                href={"https://music.apple.com/gb/artist/artio/585230648"}
+                target="_blank"
+                onClick={handleNav}
+              >
+                <SiApplemusic size={40} className="social-link" />
+              </Link>
+              <Link
+                href={"https://www.tiktok.com/@artiomusic?lang=en"}
+                target="_blank"
+                onClick={handleNav}
+              >
+                <FaTiktok size={40} className="social-link" />
+              </Link>
+              <Link
+                href={
+                  "https://www.youtube.com/channel/UCN6Em1EiZtA_YR37VXprdYg"
+                }
+                target="_blank"
+                onClick={handleNav}
+              >
+                <FaYoutubeSquare size={40} className="social-link" />
+              </Link>
+              <Link
+                href={"https://open.spotify.com/artist/0l2QxnR8KJQT4m2Ax8rhh5"}
+                target="_blank"
+                onClick={handleNav}
+              >
+                <FaSpotify size={40} className="social-link" />
+              </Link>
+              <Link
+                href={"https://www.instagram.com/artiomusic/?hl=en"}
+                target="_blank"
+                onClick={handleNav}
+              >
+                <FaInstagram size={40} className="social-link" />
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );

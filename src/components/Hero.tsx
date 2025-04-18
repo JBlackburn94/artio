@@ -1,40 +1,21 @@
-import Image from "next/image";
-import albumArt from "../../public/artwork.webp";
 import Link from "next/link";
-import localFont from "next/font/local";
-
-const optil = localFont({ src: "../font/OPTILency.otf" });
+import Button from "./Button";
 
 export default function Hero() {
   return (
     <section
-      className="w-full px-[40px] flex flex-col justify-center lg:flex-row lg:justify-between items-center py-10 gap-[40px]"
+      className="h-screen w-full relative flex justify-start items-center px-[50px] md:px-[75px] lg:px-[150px]"
       id="hero"
     >
-      <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center">
-        <h1
-          className={`${optil.className} uppercase text-[60px] lg:text-[80px]`}
-        >
-          Debut Album
+      <div className="h-screen w-full bg-black bg-opacity-40 z-10 absolute top-0 left-0"></div>
+      <div className="flex flex-col justify-start items-start z-20">
+        <h1 className="uppercase text-[50px] md:text-[80px] lg:text-[100px] font-black leading-tight">
+          Split Soul
         </h1>
-        <Image
-          src={albumArt}
-          alt="Artwork for Babyface Album"
-          className="md:h-[300px] lg:h-[400px] w-[250px] md:w-[300px] lg:w-[400px]"
-        />
-        <Link
-          className="mt-[20px] bg-artioRed font-black py-[8px] px-[20px] text-[20px] lg:text-[28px] uppercase"
-          href="https://slamdunk.world/products/artio-babyface-12vinyl-red-sld"
-          target="_blank"
-        >
-          Get Here
-        </Link>
-      </div>
-      <div className="w-full lg:w-1/2 h-full flex flex-col items-center justify-center">
-        <iframe
-          className="aspect-video  w-[400px] lg:w-[600px]"
-          src="https://www.youtube.com/embed/hqC2oGEPdvI"
-        ></iframe>
+        <h2 className="text-[40px] font-black text-artioRed leading-tight">
+          02/05/2025
+        </h2>
+        <Button href="https://kycker.ffm.to/splitsoul" content="Pre Save" />
       </div>
     </section>
   );

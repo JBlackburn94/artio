@@ -12,7 +12,7 @@ export default function About() {
     <section className="w-full flex flex-col lg:flex-row justify-center lg:justify-between items-center px-[22px] lg:px-[135px] gap-[38px] mb-10">
       <div
         className="flex flex-col justify-center items-center w-full h-auto lg:w-1/2 gap-[20px]"
-        id="about"
+        id="contact"
       >
         <h2
           className={`${optil.className} uppercase text-[170px] text-artioRed`}
@@ -80,7 +80,7 @@ export default function About() {
           <p>
             <span className="font-semibold">Press & General Enquiries</span>
             <br />
-            ealdwinkleevents@gmail.com
+            katherine@5bam.com
           </p>
         </span>
       </div>

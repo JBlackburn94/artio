@@ -1,35 +1,26 @@
-import localFont from "next/font/local";
 import Image from "next/image";
-import merchImg from "../../public/artio-tee.webp";
-import Button from "./Button";
-
-const optil = localFont({ src: "../font/OPTILency.otf" });
+import Button from "../components/Button";
+import merchImage from "../../public/new-merch.webp";
 
 export default function Merch() {
   return (
     <section
-      className="w-full flex flex-col lg:flex-row justify-center lg:justify-between items-center px-[31px] lg:px-[216px] gap-[20px] lg:gap-[133px] py-[50px] lg:py-[150px]"
+      className="min-h-screen flex flex-col lg:flex-row justify-center items-center gap-10 px-[50px] md:px-[100px]"
       id="merch"
     >
-      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center gap-[20px]">
-        <h2
-          className={`${optil.className}  uppercase text-[170px] text-artioRed`}
-        >
+      <div className="flex flex-col justify-center items-center h-[42%] w-full lg:h-full lg:w-1/2 text-center gap-2">
+        <h2 className="text-[70px] leading-tight uppercase text-artioRed font-black">
           Merch
         </h2>
-        <h3 className="font-bold text-[28px] text-center capitalize">
-          Get the latest official Artio merch.
-        </h3>
+        <h3 className="uppercase font-black">Get the latest Artio merch</h3>
         <Button href="https://artio.bigcartel.com/" content="Shop Now" />
-        <span className="flex flex-col justify-center items-center border-2 border-artioRed p-2">
-          <p>
-            Limited batches, biodegradable packaging and printed on eco friendly
-            water based ink.
-          </p>
-        </span>
+        <p className="text-xs w-3/4">
+          Limited batches, biodegradable packaging and printed with eco friendly
+          water based ink
+        </p>
       </div>
-      <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
-        <Image src={merchImg} alt="An image of an artio t-shirt" />
+      <div className="h-[58%] w-full lg:h-full lg:w-1/2 flex justify-center items-center">
+        <Image src={merchImage} alt="An image of Artio merch" />
       </div>
     </section>
   );

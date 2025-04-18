@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "OPTILency";
-  src: url("../font/OPTILency.otf") format("ttf");
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -15,12 +10,12 @@
 }
 
 body {
-  color: #F0EEEA;
-  background-color: #2F332B;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 #hero {
-  background-image: url("../../public/artio-hero.webp");
+  background-image: url("../../public/new-hero.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,10 +36,15 @@ body {
 
 .ticket-container::-webkit-scrollbar {
   width: 10px;
-  background: #2F332B;
+  background: #2f332b;
   opacity: 0.5;
 }
 
 .ticket-container::-webkit-scrollbar-thumb {
-  background: #C53434;
+  background: #c53434;
+}
+
+.social-link {
+  margin-inline: 8px;
+  color: #fe0707;
 }
