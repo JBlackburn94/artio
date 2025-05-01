@@ -6,11 +6,11 @@ export default function Footer() {
       <p>
         Website by{" "}
         <Link
-          href={"https://jasonblackburn.co.uk/"}
+          href={"mailto:jblackburndeveloper@gmail.com"}
           className="underline"
           target="_blank"
         >
-          jasonblackburn.co.uk
+          jblackburndeveloper@gmail.com
         </Link>
       </p>
     </footer>

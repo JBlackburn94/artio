@@ -8,11 +8,14 @@ import {
   FaYoutubeSquare,
 } from "react-icons/fa";
 import { SiApplemusic } from "react-icons/si";
+import BackgroundVideo from "./BackgroundVideo";
+import BlackOverlay from "./BlackOverlay";
 
 export default function About() {
   return (
-    <section className="flex flex-col lg:flex-row justify-center lg:justify-between items-center max-h-screen my-20 lg:my-0 lg:min-h-screen px-[50px] md:px-[75px] lg:px-[250px]">
-      <div className="">
+    <section className="flex flex-col lg:flex-row justify-center lg:justify-between items-center relative h-screen my-20 lg:my-0 lg:min-h-screen px-[50px] md:px-[75px] lg:px-[250px]">
+      <BlackOverlay />
+      <div className="z-30">
         <h2 className="text-[70px] font-black text-artioRed uppercase">
           Artio
         </h2>
@@ -20,10 +23,10 @@ export default function About() {
         <ul>
           <h3 className="font-black uppercase">Booking:</h3>
           <li className="mb-5">lola.castillomurphy@caa.com</li>
-          <h3 className="font-black uppercase">Press & General Enquiries:</h3>
+          <h3 className="font-black uppercase">Management:</h3>
           <li className="mb-5">katherine@5bam.com</li>
         </ul>
-        <div className="flex mt-4 mb-20">
+        <div className="flex mt-4 mb-20 z-30">
           <Link
             href={"https://music.apple.com/gb/artist/artio/585230648"}
             target="_blank"
@@ -56,9 +59,7 @@ export default function About() {
           </Link>
         </div>
       </div>
-      <div className="w-full lg:w-1/2">
-        <Image src={aboutImg} alt="A promo shot of Artio" />
-      </div>
+      <BackgroundVideo source="/about-video.m4v" />
     </section>
   );
 }

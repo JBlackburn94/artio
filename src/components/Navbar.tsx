@@ -10,7 +10,7 @@ import {
   FaSpotify,
 } from "react-icons/fa";
 import { Sling as Hamburger } from "hamburger-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -23,9 +23,27 @@ export default function Navbar() {
     setOpen(false);
   };
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+    };
+  }, [open]);
+
   return (
-    <header>
-      <nav className="px-[40px] ${isOpen ? h-auto : h-screen} py-[30px] bg-transparent">
+    <header className="absolute top-0 left-0 w-full">
+      <nav className="px-[40px] py-[30px]">
         <div className="flex justify-between items-center">
           <div className="z-50">
             <Image
@@ -86,61 +104,59 @@ export default function Navbar() {
             <Hamburger toggled={open} toggle={setOpen} />
           </div>
         </div>
-        {open && (
-          <div className="h-screen w-full absolute top-0 left-0 bg-black bg-opacity-80 z-40 backdrop-blur-md flex flex-col pt-[100px] px-10">
-            {navLinks.map(({ id, href, name }) => (
-              <Link
-                key={id}
-                href={href}
-                className="text-[40px] mb-[20px] font-black uppercase text-artioRed"
-                onClick={handleNav}
-              >
-                {name}
-              </Link>
-            ))}
-            <hr />
-            <div className="flex mt-[50px]">
-              <Link
-                href={"https://music.apple.com/gb/artist/artio/585230648"}
-                target="_blank"
-                onClick={handleNav}
-              >
-                <SiApplemusic size={40} className="social-link" />
-              </Link>
-              <Link
-                href={"https://www.tiktok.com/@artiomusic?lang=en"}
-                target="_blank"
-                onClick={handleNav}
-              >
-                <FaTiktok size={40} className="social-link" />
-              </Link>
-              <Link
-                href={
-                  "https://www.youtube.com/channel/UCN6Em1EiZtA_YR37VXprdYg"
-                }
-                target="_blank"
-                onClick={handleNav}
-              >
-                <FaYoutubeSquare size={40} className="social-link" />
-              </Link>
-              <Link
-                href={"https://open.spotify.com/artist/0l2QxnR8KJQT4m2Ax8rhh5"}
-                target="_blank"
-                onClick={handleNav}
-              >
-                <FaSpotify size={40} className="social-link" />
-              </Link>
-              <Link
-                href={"https://www.instagram.com/artiomusic/?hl=en"}
-                target="_blank"
-                onClick={handleNav}
-              >
-                <FaInstagram size={40} className="social-link" />
-              </Link>
-            </div>
-          </div>
-        )}
       </nav>
+      {open && (
+        <div className="h-screen inset-0 fixed bg-black bg-opacity-50 z-40 backdrop-blur-md flex flex-col pt-[100px] px-10">
+          {navLinks.map(({ id, href, name }) => (
+            <Link
+              key={id}
+              href={href}
+              className="text-[40px] mb-[20px] font-black uppercase text-artioRed"
+              onClick={handleNav}
+            >
+              {name}
+            </Link>
+          ))}
+          <hr />
+          <div className="flex mt-[50px]">
+            <Link
+              href={"https://music.apple.com/gb/artist/artio/585230648"}
+              target="_blank"
+              onClick={handleNav}
+            >
+              <SiApplemusic size={40} className="social-link" />
+            </Link>
+            <Link
+              href={"https://www.tiktok.com/@artiomusic?lang=en"}
+              target="_blank"
+              onClick={handleNav}
+            >
+              <FaTiktok size={40} className="social-link" />
+            </Link>
+            <Link
+              href={"https://www.youtube.com/channel/UCN6Em1EiZtA_YR37VXprdYg"}
+              target="_blank"
+              onClick={handleNav}
+            >
+              <FaYoutubeSquare size={40} className="social-link" />
+            </Link>
+            <Link
+              href={"https://open.spotify.com/artist/0l2QxnR8KJQT4m2Ax8rhh5"}
+              target="_blank"
+              onClick={handleNav}
+            >
+              <FaSpotify size={40} className="social-link" />
+            </Link>
+            <Link
+              href={"https://www.instagram.com/artiomusic/?hl=en"}
+              target="_blank"
+              onClick={handleNav}
+            >
+              <FaInstagram size={40} className="social-link" />
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

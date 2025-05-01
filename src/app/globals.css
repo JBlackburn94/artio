@@ -14,13 +14,6 @@ body {
   background-color: #000000;
 }
 
-#hero {
-  background-image: url("../../public/new-hero.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 #tickets {
   background-image: url("../../public/new-ticket.webp");
   background-size: cover;
@@ -29,7 +22,7 @@ body {
 }
 
 .ticket-container {
-  height: 1020px;
+  height: 400px;
   width: 100%;
   overflow-y: scroll;
 }
@@ -47,4 +40,10 @@ body {
 .social-link {
   margin-inline: 8px;
   color: #fe0707;
+}
+
+@media screen and (max-width: 450px) {
+  .ticket-container {
+    height: 600px;
+  }
 }
