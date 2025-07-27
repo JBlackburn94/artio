@@ -17,9 +17,6 @@ export default function Hero() {
         <h1 className="uppercase text-[100px] md:text-[80px] lg:text-[100px] text-center md:text-left font-black leading-tight">
           Split Soul
         </h1>
-        <h2 className="text-[40px] font-black text-artioRed leading-tight">
-          02/05/2025
-        </h2>
         <Button
           href="https://www.youtube.com/watch?v=-UaA8c-mt2k"
           content="Listen"
