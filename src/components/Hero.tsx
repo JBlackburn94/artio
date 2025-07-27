@@ -20,7 +20,10 @@ export default function Hero() {
         <h2 className="text-[40px] font-black text-artioRed leading-tight">
           02/05/2025
         </h2>
-        <Button href="https://kycker.ffm.to/splitsoul" content="Pre Save" />
+        <Button
+          href="https://www.youtube.com/watch?v=-UaA8c-mt2k"
+          content="Listen"
+        />
       </div>
       <BackgroundVideo source="/hero.m4v" />
     </section>
