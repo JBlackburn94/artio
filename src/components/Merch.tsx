@@ -15,7 +15,10 @@ export default function Merch() {
         <h2 className="text-artioRed font-black uppercase leading-tight text-[70px]">
           Merch
         </h2>
-        <Button href="https://artio.bigcartel.com/" content="Shop Now" />
+        <Button
+          href="https://apm.allotment.pro/artist/artio/"
+          content="Shop Now"
+        />
       </div>
       <div className="z-30 w-full md:w-3/4 lg:w-1/2 overflow-hidden">
         <Image src={merchImage} alt="An image of Artio merch" />
