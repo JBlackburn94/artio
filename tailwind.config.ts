@@ -8,12 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        optil: ["OPTILency"],
-      },
       colors: {
-        artioBlack: "#2F332B",
-        artioWhite: "#F0EEEA",
         artioRed: "#FE0707",
       },
     },
