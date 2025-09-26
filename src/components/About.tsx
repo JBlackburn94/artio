@@ -5,7 +5,7 @@ import contact from '/public/contact.jpg';
 
 export default function About() {
     return (
-        <section className="relative min-h-screen bg-black/40 px-5 md:px-20 py-32">
+        <section id="contact" className="relative min-h-screen bg-black/40 px-5 md:px-20 py-32">
             <div className="z-30 artio-font">
                 <Image src={logo} alt="Artio logo" className="h-40 lg:h-52 w-auto"/>
                 <div className="space-y-4 break-all">
