@@ -4,7 +4,6 @@ import Image from "next/image";
 import hero from "../../public/hero-bg.png";
 import soulRot from '../../public/soul rot text.png';
 import bundleOne from '../../public/bundle-1.png';
-import impericon from '../../public/impericon.png';
 import rocksound from '../../public/rocksound.png';
 import BlackOverlay from "@/components/BlackOverlay";
 
@@ -23,10 +22,7 @@ export default function Hero() {
             </div>
 
             <div className="flex justify-center items-end gap-20 max-md:flex-col z-20 mt-10 mb-20">
-                <div className="flex flex-col gap-5">
-                    <Image src={impericon} alt={"Impericon Bundle"} className="max-h-96 w-auto mt-10"/>
-                    <Button href={"https://www.impericon.com/collections/artio"} content={"Impericon Exclusives"}/>
-                </div>
+
                 <div className="flex flex-col gap-5">
                     <Image src={rocksound} alt={"Rocksound Bundle"} className="max-h-96 w-auto mt-10"/>
                     <Button

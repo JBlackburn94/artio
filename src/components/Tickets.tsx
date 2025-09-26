@@ -1,7 +1,6 @@
 import Script from "next/script";
 import Image from "next/image";
-import ticket from "/public/tickets.png";
-import contact from "*.jpg";
+import ticket from "/public/merch.jpg";
 
 export default function Tickets() {
     return (
