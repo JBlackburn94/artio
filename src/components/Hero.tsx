@@ -14,6 +14,7 @@ export default function Hero() {
             id="merch"
         >
             <div className="flex flex-col justify-center items-center z-20 gap-5">
+                <Button href={"https://ffm.to/soulrot"} content={"Pre-Save"}/>
                 <Image src={soulRot} alt={"Soul Rot pre-order information"}/>
                 <Image src={bundleOne} alt={"Artio merch bundle"} className="h-auto max-w-full mt-10 mb-5"/>
                 <Button href={"https://artio.tmstor.es/"} content={"Pre-Order Bundles"}/>
