@@ -1,6 +1,6 @@
 import Script from "next/script";
 import Image from "next/image";
-import ticket from "/public/merch.jpg";
+import ticket from "/public/tickets.webp";
 
 export default function Tickets() {
     return (
