@@ -8,10 +8,10 @@ export default function Merch() {
             className="relative flex flex-col justify-center items-center min-h-screen bg-black/40 px-5 md:px-20 py-32"
             id="listen"
         >
-            <h1 className="artio-font text-5xl max-md:text-3xl text-center my-5">Let it be a void</h1>
-            <Button href="https://ffm.to/artioletitbeavoid" content="Listen Now"/>
+            <h1 className="artio-font text-5xl max-md:text-3xl text-center my-5">Seven Suns feat . Kahal</h1>
+            <Button href="https://ffm.to/artiosevensuns" content="Listen Now"/>
             <iframe
-                className="w-[calc(100%-48px)] mt-10 max-w-[1000px] aspect-video mx-auto bg-black"
+                className="w-[calc(100%-48px)] mt-10 max-w-[1000px] aspect-video mx-auto hidden bg-black"
                 src="https://www.youtube.com/embed/DjN9ECFp8Bw?si=GbauJduesHo7QkDY"
                 title="YouTube video player" frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
