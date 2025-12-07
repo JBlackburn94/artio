@@ -11,8 +11,8 @@ export default function Merch() {
             <h1 className="artio-font text-5xl max-md:text-3xl text-center my-5">Seven Suns feat . Kahal</h1>
             <Button href="https://ffm.to/artiosevensuns" content="Listen Now"/>
             <iframe
-                className="w-[calc(100%-48px)] mt-10 max-w-[1000px] aspect-video mx-auto hidden bg-black"
-                src="https://www.youtube.com/embed/DjN9ECFp8Bw?si=GbauJduesHo7QkDY"
+                className="w-[calc(100%-48px)] mt-10 max-w-[1000px] aspect-video mx-auto bg-black"
+                src="https://www.youtube.com/embed/ehq-MWhittk?si=HFQy3qjUSkXtkmKH"
                 title="YouTube video player" frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
