@@ -48,6 +48,11 @@ h6 {
     margin-inline: 10px;
 }
 
+.order-image {
+    max-width: min(500px, 100% - 40px);
+    margin-inline: auto;
+}
+
 @media screen and (max-width: 450px) {
     .ticket-container {
         height: 600px;
