@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import orderBackground from "/public/order-background.webp";
-import cd from "/public/cd.png";
+import cd from "/public/CD.png";
 import vinyl from "/public/vinyl.png";
 import rocksound from "/public/rocksound.png";
 
