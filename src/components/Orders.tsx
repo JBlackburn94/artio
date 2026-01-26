@@ -10,7 +10,7 @@ import rocksound from "/public/rocksound.png";
 export default function Orders() {
     return (
         <section className="h-fit w-screen flex flex-col justify-center relative p-5" id="merch">
-            <Link href="https://artio.tmstor.es" target="_blank" className="hidden max-lg:flex flex-col justify-center items-center text-5xl max-lg:text-3xl artio-font z-10 text-center">
+            <Link href="https://apm.allotment.pro/artist/artio/" target="_blank" className="hidden max-lg:flex flex-col justify-center items-center text-5xl max-lg:text-3xl artio-font z-10 text-center">
                 <p className="overflow-hidden">Order now</p>
                 <p className="overflow-hidden">Artio official merch store</p>
             </Link>
