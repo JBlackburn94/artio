@@ -7,13 +7,13 @@ import Footer from "@/components/Footer";
 import Orders from "@/components/Orders";
 
 export default function Home() {
-    return (
-        <main>
-            <Hero/>
-            <Merch/>
-            <Orders />
-            <Tickets/>
-            <About/>
-        </main>
-    );
+  return (
+    <main>
+      <Hero />
+      <Orders />
+      <Merch />
+      <Tickets />
+      <About />
+    </main>
+  );
 }
